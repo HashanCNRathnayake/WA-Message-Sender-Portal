@@ -281,7 +281,7 @@ $todayCost = $todayCostQuery->fetch_assoc()['today_cost'] ?? 0;
 
 
 
-        <div class="table" style="max-height: 450px;">
+        <div class="table-responsive" style="max-height: 450px; overflow: auto;">
             <table class="table table-bordered table-striped table-hover table-sm" style="min-width: 2000px;">
                 <thead class="table-dark sticky-top">
                     <tr>
