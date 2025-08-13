@@ -17,10 +17,17 @@
         display: none;
         /* Chrome, Safari, Opera */
     }
+
+
+    .nav-btn {
+        background-color: white;
+        padding: 2px 5px;
+    }
 </style>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-2">
+
+<nav class="navbar navbar-expand-lg mb-2">
     <div class="container-fluid px-0">
 
         <a class="navbar-brand"
@@ -43,23 +50,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?= htmlspecialchars($baseUrl) ?>admin/users.php">Manage Users</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="<?= htmlspecialchars($baseUrl) ?>admin/dashboard.php">dashb</a>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="<?= htmlspecialchars($baseUrl) ?>process_logs.php">Logs</a>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="<?= htmlspecialchars($baseUrl) ?>admin/create_templates.php">Create WA Template</a>
-                    </li> -->
-                    <!--<li class="nav-item">-->
-                    <!--    <a class="nav-link" href="<?= htmlspecialchars($baseUrl) ?>admin/messages.php">View All Logs</a>-->
-                    <!--</li>-->
                 <?php endif; ?>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="<?= htmlspecialchars($baseUrl) ?>templates.php">Templates</a>
-                </li> -->
-
                 <li class="nav-item">
                     <a class="nav-link" href="<?= htmlspecialchars($baseUrl) ?>history.php">Message History</a>
                 </li>
