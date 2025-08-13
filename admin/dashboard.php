@@ -182,6 +182,10 @@ $todayCost = $todayCostQuery->fetch_assoc()['today_cost'] ?? 0;
 <head>
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
 </head>
 
 <style>
@@ -220,12 +224,6 @@ $todayCost = $todayCostQuery->fetch_assoc()['today_cost'] ?? 0;
                     <form action="/../export_data.php" method="post">
                         <button type="submit" class="btn btn-sm btn-primary">Download Data Report</button>
                     </form>
-                    <!-- <form action="update_database.php" method="post" onsubmit="return confirm('Run log processor?');">
-                        <button type="submit" class="btn btn-sm btn-warning ms-1">📂 Process Log File</button>
-                    </form>
-                    <form action="functions/calculate_message_cost.php" method="post" onsubmit="return confirm('Calculate the costs and save?');">
-                        <button type="submit" class="btn btn-sm btn-warning ms-1 ">Calculate Cost</button>
-                    </form> -->
                     <div class="d-flex flex-row justify-content-end align-items-start ms-2">
                         <?php if (($_GET['filter'] ?? '') === 'failed'): ?>
                             <a href="?" class="btn btn-outline-primary btn-sm">
@@ -240,41 +238,74 @@ $todayCost = $todayCostQuery->fetch_assoc()['today_cost'] ?? 0;
 
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col mb-3">
-                    <div class="card shadow-sm border-0 bg-light">
-                        <div class="card-body">
-                            <h6>Today's Cost</h6>
-                            <h4 class="text-primary">$<?= number_format($todayCost, 4) ?></h4>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col mb-3">
-                    <div class="card shadow-sm border-0">
+            <div class="row mb-4">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card metric-card h-100">
                         <div class="card-body">
-                            <h6>Total Cost</h6>
-                            <h4 class="text-success">$<?= number_format($stats['total_cost'], 4) ?></h4>
+                            <div class="d-flex align-items-center">
+                                <div class="metric-icon bg-success bg-opacity-10 text-success me-3">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1 small">Today's Cost</h6>
+                                    <h4 class="mb-0 text-primary fw-bold">$<?= number_format($todayCost, 4) ?></h4>
+                                    <small class="text-muted">+0% from yesterday</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col mb-3">
-                    <div class="card shadow-sm border-0">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card metric-card h-100">
                         <div class="card-body">
-                            <h6>Avg Cost / Conversation</h6>
-                            <h4>$<?= number_format($stats['avg_cost'], 4) ?></h4>
+                            <div class="d-flex align-items-center">
+                                <div class="metric-icon bg-primary bg-opacity-10 text-primary me-3">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1 small">Total Cost</h6>
+                                    <h4 class="mb-0 fw-bold text-success">$<?= number_format($stats['total_cost'], 4) ?></h4>
+                                    <small class="text-muted">Lifetime spending</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col mb-3">
-                    <div class="card shadow-sm border-0">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card metric-card h-100">
                         <div class="card-body">
-                            <h6>Total Unique Conversations</h6>
-                            <h4><?= number_format($stats['total_conversations']) ?></h4>
+                            <div class="d-flex align-items-center">
+                                <div class="metric-icon bg-info bg-opacity-10 text-info me-3">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1 small">Avg Cost/Conversation</h6>
+                                    <h4 class="mb-0 fw-bold">$<?= number_format($stats['avg_cost'], 4) ?></h4>
+                                    <small class="text-muted">Per conversation</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card metric-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="metric-icon bg-warning bg-opacity-10 text-warning me-3">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1 small">Total Conversations</h6>
+                                    <h4 class="mb-0 fw-bold"><?= number_format($stats['total_conversations']) ?></h4>
+                                    <small class="text-muted">Unique conversations</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
 
         </div>
