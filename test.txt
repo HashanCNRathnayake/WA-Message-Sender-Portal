@@ -1,0 +1,185 @@
+[
+    {
+        "phone": "94787189456",
+        "status": "success",
+        "http_code": 200,
+        "message_status": "accepted",
+        "response": {
+            "messaging_product": "whatsapp",
+            "contacts": [
+                {
+                    "input": "94787189456",
+                    "wa_id": "94787189456"
+                }
+            ],
+            "messages": [
+                {
+                    "id": "wamid.HBgLOTQ3ODcxODk0NTYVAgARGBIwQ0Q4QjZGN0JDODRBQzc3RjUA",
+                    "message_status": "accepted"
+                }
+            ]
+        },
+        "payload": {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": "94787189456",
+            "type": "template",
+            "template": {
+                "name": "activate_contacts",
+                "language": {
+                    "code": "en"
+                }
+            }
+        }
+    }
+]
+
+
+
+
+
+
+
+
+
+
+2025-06-17 03:35:45
+{"object":"whatsapp_business_account",
+"entry":[{"id":"1207859924119334",
+"changes":[{
+    "value":{
+        "messaging_product":"whatsapp",
+        "metadata":{"display_phone_number":"6585333727","phone_number_id":"672363212628877"},
+        "statuses":[{
+            "id":"wamid.HBgLOTQ3ODcxODk0NTYVAgARGBJBNEM0OEU0NTdBRDI5NEU0RkMA",
+            "status":"sent",
+            "timestamp":"1750131343",
+            "recipient_id":"94787189456",
+            
+            "conversation":{"id":"fe06037664339da541f176c43d8c74d9","expiration_timestamp":"1750131900","origin":{"type":"marketing"}},
+            "pricing":{"billable":true,"pricing_model":"CBP","category":"marketing"}
+            
+            }]},"field":"messages"}]}]}
+
+2025-06-17 03:35:45
+{"object":"whatsapp_business_account",
+"entry":[{"id":"1207859924119334",
+"changes":[{
+    "value":{
+        "messaging_product":"whatsapp",
+        "metadata":{"display_phone_number":"6585333727","phone_number_id":"672363212628877"},
+        "statuses":[{
+            "id":"wamid.HBgLOTQ3ODcxODk0NTYVAgARGBJBNEM0OEU0NTdBRDI5NEU0RkMA",
+            "status":"delivered",
+            "timestamp":"1750131344",
+            "recipient_id":"94787189456",
+
+            "conversation":{"id":"fe06037664339da541f176c43d8c74d9","origin":{"type":"marketing"}},
+            "pricing":{"billable":true,"pricing_model":"CBP","category":"marketing"}
+            
+            }]},"field":"messages"}]}]}
+
+2025-06-17 03:36:20
+{"object":"whatsapp_business_account",
+"entry":[{"id":"1207859924119334",
+"changes":[{
+    "value":{
+        "messaging_product":"whatsapp",
+        "metadata":{"display_phone_number":"6585333727","phone_number_id":"672363212628877"},
+        "statuses":[{
+            "id":"wamid.HBgLOTQ3ODcxODk0NTYVAgARGBJBNEM0OEU0NTdBRDI5NEU0RkMA",
+            "status":"read",
+            "timestamp":"1750131379",
+            "recipient_id":"94787189456"}]
+            
+            },"field":"messages"}]}]}
+
+2025-06-17 03:36:40
+{"object":"whatsapp_business_account",
+"entry":[{"id":"1207859924119334",
+"changes":[{
+    "value":{
+        "messaging_product":"whatsapp",
+        "metadata":{"display_phone_number":"6585333727","phone_number_id":"672363212628877"},
+        "contacts":[{
+            "profile":{"name":"Hashan_Rathnayake"},
+            "wa_id":"94787189456"}
+            ],
+        "messages":[{
+            "from":"94787189456",
+            "id":"wamid.HBgLOTQ3ODcxODk0NTYVAgASGCA3OTQ4ODcwQjYwN0REOEQxOTg4RTBGQjUyMzcwMkNFOAA=",
+            "timestamp":"1750131399",
+            "text":{
+                "body":"Confirm"
+                },
+            "type":"text"
+            
+            }]},"field":"messages"}]}]}
+
+2025-06-17 03:36:49
+{"object":"whatsapp_business_account","entry":[{"id":"1207859924119334","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"6585333727","phone_number_id":"672363212628877"},"contacts":[{"profile":{"name":"Hashan_Rathnayake"},"wa_id":"94787189456"}],"messages":[{"from":"94787189456","id":"wamid.HBgLOTQ3ODcxODk0NTYVAgASGCBCMzUzOUI5OUU0NUYwREEwQ0IxMDA2NTYxMUM1RjU4QgA=","timestamp":"1750131408","type":"reaction","reaction":{"message_id":"wamid.HBgLOTQ3ODcxODk0NTYVAgARGBJBNEM0OEU0NTdBRDI5NEU0RkMA","emoji":"\u2764\ufe0f"}}]},"field":"messages"}]}]}
+
+
+2025-06-17 03:37:44
+{"object":"whatsapp_business_account",
+"entry":[{"id":"1207859924119334",
+"changes":[{
+    "value":{
+        "messaging_product":"whatsapp",
+        "metadata":{"display_phone_number":"6585333727","phone_number_id":"672363212628877"},
+        "contacts":[{
+            "profile":{"name":"Hashan_Rathnayake"},
+            "wa_id":"94787189456"
+            }],
+        "messages":[{
+            "context":{
+                "from":"6585333727",
+                "id":"wamid.HBgLOTQ3ODcxODk0NTYVAgARGBJBNEM0OEU0NTdBRDI5NEU0RkMA"
+                },
+            "from":"94787189456",
+            "id":"wamid.HBgLOTQ3ODcxODk0NTYVAgASGCA1RUU1QzMyQzczMjgxRDc5QUE1NUM5NUVGQTZGQUEyQgA=",
+            "timestamp":"1750131463",
+            "text":{"body":"Ok"},
+            "type":"text"
+            
+            }]},"field":"messages"}]}]}
+
+
+
+msg response
+[
+    {
+        "phone": "+94787189456",
+        "status": "success",
+        "http_code": 200,
+        "message_status": "accepted",
+        "response": {
+            "messaging_product": "whatsapp",
+            "contacts": [
+                {
+                    "input": "+94787189456",
+                    "wa_id": "94787189456"
+                }
+            ],
+            "messages": [
+                {
+                    "id": "wamid.HBgLOTQ3ODcxODk0NTYVAgARGBI3N0EzM0U3QkU5MTY0RUM2QzIA",
+                    "message_status": "accepted"
+                }
+            ]
+        },
+        "payload": {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": "+94787189456",
+            "type": "template",
+            "template": {
+                "name": "activate_contacts",
+                "language": {
+                    "code": "en"
+                }
+            }
+        }
+    }
+]
+
